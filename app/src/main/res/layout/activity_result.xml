@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ResultActivity">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            android:text="Apakah Hanip ganteng?"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/likeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imgLike"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_thumb_up"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvLikeCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:text="10"
+                    android:fontFamily="monospace"
+                    android:textSize="30sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/imgLike"
+                    app:layout_constraintBottom_toBottomOf="@id/imgLike"
+                    app:layout_constraintTop_toTopOf="@id/imgLike" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/tvDislikeCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:text="10"
+                    android:textSize="30sp"
+                    android:fontFamily="monospace"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/imgDislike"
+                    app:layout_constraintBottom_toBottomOf="@id/imgDislike"
+                    app:layout_constraintTop_toTopOf="@id/imgDislike" />
+                <ImageView
+                    android:id="@+id/imgDislike"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_thumb_down"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvCommentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Komentar"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tvComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp" />
+
+
+</LinearLayout>
